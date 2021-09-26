@@ -29,6 +29,7 @@ if __name__ == "__main__":
 	while flag:
 
 		command, taken = listener.listen()
+		command = command.lower()
 		
 		if command == 'arrivederci':
 			
