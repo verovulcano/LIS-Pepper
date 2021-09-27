@@ -1,0 +1,43 @@
+Single words:
+
+- Acqua
+- Bagno
+- Bar
+- Bere
+- Bicchiere
+- Birra
+- Buongiorno
+- Caffè
+- Coca-Cola
+- Cosa
+- Destra
+- Dire
+- Dove
+- Essere
+- Gomma da masticare
+- Grazie
+- Io
+- Mangiare
+- Non
+- Pagare
+- Panino
+- Per favore
+- Portare
+- Sinistra
+- Tavolo
+- Tu
+- Vino
+- Volere
+
+Example of sentences:
+
+- Buongiorno mi dica
+- Cosa ti porto?
+- Io vorrei (caffè, panino, ...)
+- Mi porti (caffè, panino, ...)
+- Dov'è il bagno?
+- Il bagno è a destra / a sinistra
+- Io vorrei bere (acqua, coca-cola, ...)
+- Io vorrei mangiare (panino)
+- (caffè, panino, ...) non c'è
+- C'è un tavolo?
