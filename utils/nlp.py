@@ -39,6 +39,10 @@ def text_processing(text):
 
 			sentence[n] = 'grazie'
 
+		elif elem == 'panare':
+
+			sentence[n] = 'panino'
+
 		elif elem == 'coca':
 
 			if sentence[n + 1] == '-':
