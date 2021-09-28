@@ -1,16 +1,13 @@
 Single words:
 
+ONE HAND
+
 - Acqua
 - Bagno
-- Bar
 - Bere
 - Bicchiere
-- Birra
-- Buongiorno
 - Caffè
 - Coca-Cola
-- Cosa
-- Destra
 - Dire
 - Dove
 - Essere
@@ -20,14 +17,21 @@ Single words:
 - Mangiare
 - Non
 - Pagare
-- Panino
 - Per favore
 - Portare
-- Sinistra
-- Tavolo
 - Tu
 - Vino
 - Volere
+
+TWO HANDS
+- Bar
+- Birra
+- Buongiorno
+- Cosa
+- Destra
+- Panino
+- Sinistra
+- Tavolo
 
 Example of sentences:
 

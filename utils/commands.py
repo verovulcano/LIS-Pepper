@@ -17,11 +17,12 @@ def acqua(pepper, finger_name, finger_velocity):
         finger_value.append(degToRad(180))
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(0), degToRad(-80), degToRad(-30), degToRad(0)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(0), degToRad(-80), degToRad(-30), degToRad(0)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+    
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["LElbowRoll"], [degToRad(-60)], [0.8])
@@ -34,13 +35,14 @@ def bagno(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(0), degToRad(-80), degToRad(-90), degToRad(90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(0), degToRad(-80), degToRad(-90), degToRad(90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
 
-    for i in range(2):
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
+
+    for i in range(3):
         pepper.setAngles(["LElbowYaw"], [degToRad(-70)], [0.8])
         time.sleep(0.2)
         pepper.setAngles(["LElbowYaw"], [degToRad(-90)], [0.8])
@@ -51,11 +53,12 @@ def bere(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(10), degToRad(0), degToRad(-70), degToRad(-60), degToRad(30)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(10), degToRad(0), degToRad(-70), degToRad(-60), degToRad(30)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
     
     for i in range(2):
         pepper.setAngles(["LElbowRoll"], [degToRad(-80)], [0.8])
@@ -68,11 +71,12 @@ def bicchiere(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(20), degToRad(180), degToRad(180)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(-10), degToRad(10), degToRad(-80), degToRad(-30), degToRad(-90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(-10), degToRad(10), degToRad(-80), degToRad(-30), degToRad(-90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
     
     for i in range(3):
         pepper.setAngles(["LWristYaw"], [degToRad(90)], [0.8])
@@ -85,11 +89,12 @@ def caffe(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(180)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(10), degToRad(0), degToRad(-70), degToRad(-60), degToRad(0)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(10), degToRad(0), degToRad(-70), degToRad(-60), degToRad(0)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
     
     for i in range(2):
         pepper.setAngles(["LWristYaw"], [degToRad(50)], [0.8])
@@ -102,10 +107,11 @@ def cocacola(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(90), degToRad(60), degToRad(30), degToRad(180), degToRad(90)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(10), degToRad(0), degToRad(-80), degToRad(-60), degToRad(30)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(10), degToRad(0), degToRad(-80), degToRad(-60), degToRad(30)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
     pepper.setAngles(["LShoulderRoll"], [degToRad(15)], [0.2])
@@ -116,11 +122,12 @@ def gomma(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(180), degToRad(180), degToRad(180), degToRad(160), degToRad(180), degToRad(180), degToRad(140), degToRad(180), degToRad(180), degToRad(0), degToRad(180), degToRad(180), degToRad(90), degToRad(180)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(5), degToRad(0), degToRad(-70), degToRad(-50), degToRad(-30)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(5), degToRad(0), degToRad(-70), degToRad(-50), degToRad(-30)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
     
     for i in range(2):
         pepper.setAngles(["LElbowRoll"], [degToRad(-50)], [0.8])
@@ -136,10 +143,11 @@ def grazie(pepper, finger_name, finger_velocity):
         finger_value.append(degToRad(180))
     
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(0), degToRad(-80), degToRad(-60), degToRad(-90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(0), degToRad(-80), degToRad(-60), degToRad(-90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
     pepper.setAngles(["LShoulderPitch"], [degToRad(30)], [0.2])
@@ -150,11 +158,12 @@ def mangiare(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(120), degToRad(120), degToRad(0), degToRad(120), degToRad(120), degToRad(0), degToRad(120), degToRad(120), degToRad(0), degToRad(120), degToRad(120), degToRad(0), degToRad(120)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(15), degToRad(0), degToRad(-80), degToRad(-50), degToRad(-90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(15), degToRad(0), degToRad(-80), degToRad(-50), degToRad(-90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
     
     for i in range(3):
         pepper.setAngles(["LElbowRoll"], [degToRad(-90)], [0.8])
@@ -170,11 +179,12 @@ def pagare(pepper, finger_name, finger_velocity):
         finger_value.append(degToRad(0))
     
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(20), degToRad(-60), degToRad(-50), degToRad(-50)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(20), degToRad(-60), degToRad(-50), degToRad(-50)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
     
     for i in range(2):
         pepper.setAngles(["LElbowYaw"], [degToRad(-30)], [0.8])
@@ -187,11 +197,12 @@ def vino(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(0), degToRad(-80), degToRad(-80), degToRad(0)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(0), degToRad(-80), degToRad(-80), degToRad(0)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(2):
         pepper.setAngles(["LElbowRoll"], [degToRad(-88)], [0.8])
@@ -204,11 +215,11 @@ def tu(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(10), degToRad(0), degToRad(-40), degToRad(-30), degToRad(-20)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(10), degToRad(0), degToRad(-40), degToRad(-30), degToRad(-20)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
 
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
 def io(pepper, finger_name, finger_velocity):
@@ -216,11 +227,11 @@ def io(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(30), degToRad(0), degToRad(-90), degToRad(-30), degToRad(-90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(30), degToRad(0), degToRad(-90), degToRad(-30), degToRad(-90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
 
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
 def non(pepper, finger_name, finger_velocity):
@@ -228,11 +239,12 @@ def non(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(30), degToRad(0), degToRad(-80), degToRad(-90), degToRad(90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(30), degToRad(0), degToRad(-80), degToRad(-90), degToRad(90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["LElbowYaw"], [degToRad(-70)], [0.8])
@@ -245,10 +257,11 @@ def dire(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
     
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(0), degToRad(-80), degToRad(-50), degToRad(-90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(0), degToRad(-80), degToRad(-50), degToRad(-90)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
     pepper.setAngles(["LShoulderPitch"], [degToRad(40)], [0.4])
@@ -262,11 +275,11 @@ def portare(pepper, finger_name, finger_velocity):
         finger_value.append(degToRad(0))
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(10), degToRad(-30), degToRad(-40), degToRad(40)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(10), degToRad(-30), degToRad(-40), degToRad(40)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
 
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
     pepper.setAngles(["LElbowRoll"], [degToRad(-60)], [0.8])
@@ -277,11 +290,12 @@ def dove(pepper, finger_name, finger_velocity):
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(0), degToRad(0)]
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(20), degToRad(30), degToRad(-80), degToRad(-30), degToRad(0)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(20), degToRad(30), degToRad(-80), degToRad(-30), degToRad(0)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["LElbowRoll"], [degToRad(-60)], [0.8])
@@ -297,10 +311,11 @@ def perfavore(pepper, finger_name, finger_velocity):
         finger_value.append(degToRad(180))
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(10), degToRad(0), degToRad(-88), degToRad(-70), degToRad(0)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(10), degToRad(0), degToRad(-88), degToRad(-70), degToRad(0)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
     pepper.setAngles(["LShoulderPitch", "LElbowYaw"], [degToRad(30), degToRad(-60)], [0.2, 0.2])
@@ -314,11 +329,12 @@ def volere(pepper, finger_name, finger_velocity):
         finger_value1.append(degToRad(180))
 
     # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(30), degToRad(0), degToRad(-90), degToRad(-50), degToRad(-90)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value1, finger_velocity)
-    time.sleep(0.5)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(30), degToRad(0), degToRad(-90), degToRad(-50), degToRad(-90)] + finger_value1
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(1)
 
     finger_value2 = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180)]
 
@@ -329,12 +345,12 @@ def essere(pepper, finger_name, finger_velocity):
 
     finger_value = [degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(0), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180), degToRad(180)]
 
-    # base configuration
-    pepper.setAngles(["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"], [degToRad(10), degToRad(10), degToRad(-80), degToRad(0), degToRad(-100)], [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(finger_name, finger_value, finger_velocity)
-    time.sleep(1)
+    joints = ["LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw"] + finger_name
+    values = [degToRad(10), degToRad(10), degToRad(-80), degToRad(0), degToRad(-100)] + finger_value
+    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["LElbowRoll"], [degToRad(-88)], [0.8])
@@ -365,12 +381,13 @@ def bar(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints = LRarm_name + LRfinger_name
+    values = LRarm_value + LRfinger_value
+    velocities = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value, LRfinger_velocity)
-    time.sleep(1)
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["LShoulderPitch", "RShoulderPitch"], [degToRad(0), degToRad(20)], [0.8, 0.8])
@@ -401,11 +418,12 @@ def birra(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints = LRarm_name + LRfinger_name
+    values = LRarm_value + LRfinger_value
+    velocities = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value, LRfinger_velocity)
+    pepper.setAngles(joints, values, velocities)
     time.sleep(1)
 
     pepper.setAngles(["LShoulderPitch"], [degToRad(30)], [0.8])
@@ -429,12 +447,13 @@ def panino(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints = LRarm_name + LRfinger_name
+    values = LRarm_value + LRfinger_value
+    velocities = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value, LRfinger_velocity)
-    time.sleep(1)
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(2):
         pepper.setAngles(["LElbowYaw", "RElbowRoll"], [degToRad(-60), degToRad(120)], [0.8, 0.8])
@@ -463,12 +482,13 @@ def tavolo(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints = LRarm_name + LRfinger_name
+    values = LRarm_value + LRfinger_value
+    velocities = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value, LRfinger_velocity)
-    time.sleep(1)
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     pepper.setAngles(["LElbowRoll", "RElbowRoll"], [degToRad(0), degToRad(0)], [0.8, 0.8])
     time.sleep(1)
@@ -538,12 +558,13 @@ def sinistra(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints = LRarm_name + LRfinger_name
+    values = LRarm_value + LRfinger_value
+    velocities = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value, LRfinger_velocity)
-    time.sleep(1)
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["RElbowYaw"], [degToRad(20)], [0.8])
@@ -572,12 +593,13 @@ def destra(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints = LRarm_name + LRfinger_name
+    values = LRarm_value + LRfinger_value
+    velocities = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value, LRfinger_velocity)
-    time.sleep(1)
+    pepper.setAngles(joints, values, velocities)
+    time.sleep(0.5)
 
     for i in range(3):
         pepper.setAngles(["LElbowYaw"], [degToRad(-20)], [0.8])
