@@ -517,21 +517,22 @@ def cosa(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints1 = LRarm_name + LRfinger_name
+    values1 = LRarm_value + LRfinger_value1
+    velocities1 = LRarm_velocity + LRfinger_velocity
+
     # base configuration
-    pepper.setAngles(LRarm_name, LRarm_value, LRarm_velocity)
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(LRfinger_name, LRfinger_value1, LRfinger_velocity)
+    pepper.setAngles(joints1, values1, velocities1)
     time.sleep(0.2)
 
     pepper.setAngles(LRfinger_name, LRfinger_value2, LRfinger_velocity)
     time.sleep(0.2)
 
-    joints = ["LElbowRoll", "RElbowRoll"] + LRfinger_name
-    values = [degToRad(-30), degToRad(30)] + LRfinger_value1
-    velocities = [0.2, 0.2] + LRfinger_velocity
+    joints2 = ["LElbowRoll", "RElbowRoll"] + LRfinger_name
+    values2 = [degToRad(-30), degToRad(30)] + LRfinger_value1
+    velocities2 = [0.2, 0.2] + LRfinger_velocity
 
-    pepper.setAngles(joints, values, velocities)
+    pepper.setAngles(joints2, values2, velocities2)
     time.sleep(0.2)
 
     pepper.setAngles(LRfinger_name, LRfinger_value2, LRfinger_velocity)
@@ -629,17 +630,18 @@ def buongiorno(pepper, Lfinger_name, Rfinger_name, finger_velocity):
     
     LRarm_velocity = [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
+    joints1 = Larm_name + Lfinger_name
+    values1 = Larm_value + finger_value1
+    velocities1 = [0.4, 0.4, 0.4, 0.4, 0.4] + finger_velocity
+
     # base configuration
-    pepper.setAngles(Larm_name, Larm_value, [0.4, 0.4, 0.4, 0.4, 0.4])
-    time.sleep(0.2)
-    # finger configuration
-    pepper.setAngles(Lfinger_name, finger_value1, finger_velocity)
+    pepper.setAngles(joints1, values1, velocities1)
     time.sleep(0.2)
 
-    joints = Rarm_name + LRfinger_name
-    values = Rarm_value + LRfinger_value
-    velocities = [0.4, 0.4, 0.4, 0.4, 0.4] + LRfinger_velocity
-    pepper.setAngles(joints, values, velocities)
+    joints2 = Rarm_name + LRfinger_name
+    values2 = Rarm_value + LRfinger_value
+    velocities2 = [0.4, 0.4, 0.4, 0.4, 0.4] + LRfinger_velocity
+    pepper.setAngles(joints2, values2, velocities2)
     time.sleep(0.5)
 
     pepper.setAngles(["LElbowYaw", "RElbowYaw"], [degToRad(-80), degToRad(80)], [0.4, 0.4])
