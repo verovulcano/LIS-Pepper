@@ -9,7 +9,9 @@ def text_processing(text):
 
 	for token in doc:
 
-		sentence.append(token.lemma_)
+		if not(token.pos_ == 'DET' or token.pos_ == 'ADP'):
+			
+			sentence.append(token.lemma_)
 
 	for n, elem in enumerate(sentence):
 
@@ -22,11 +24,6 @@ def text_processing(text):
 
 			sentence[n] = 'io'
 			sentence.insert(n + 1, 'tu')
-
-		elif elem == 'il' or elem == 'lo' or elem == 'la' or elem == 'i' or elem == 'gli' \
-		or elem == 'le' or elem == 'a' or elem == 'uno' or elem == 'c\'':
-
-			sentence.remove(elem)
 
 		elif elem == 'per':
 
