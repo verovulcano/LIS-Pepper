@@ -25,13 +25,9 @@ def text_processing(text):
 			sentence[n] = 'io'
 			sentence.insert(n + 1, 'tu')
 
-		elif elem == 'per':
-
-			if sentence[n + 1] == 'favore':
-
-				sentence[n] = 'perfavore'
-				sentence.remove(sentence[n + 1])
-
+		elif elem == 'favore':
+			sentence[n] = 'per favore'
+		
 		elif elem == 'grazia':
 
 			sentence[n] = 'grazie'
@@ -51,11 +47,9 @@ def text_processing(text):
 
 		elif elem == 'gomma':
 
-			if sentence[n + 1] == 'da':
-				if sentence[n + 2] == 'masticare':
+			if sentence[n + 1] == 'masticare':
 
-					sentence[n] = 'gomma da masticare'
-					sentence.remove(sentence[n + 1])
+				sentence[n] = 'gomma da masticare'
 				sentence.remove(sentence[n + 1])
 
 	return sentence

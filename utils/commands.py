@@ -723,7 +723,7 @@ def action(x, pepper, Lfinger_name, Rfinger_name, finger_velocity):
     elif x == 'destra':
         destra(pepper, Lfinger_name, Rfinger_name, finger_velocity)
 
-    elif x == 'perfavore':
+    elif x == 'per favore':
         perfavore(pepper, Lfinger_name, finger_velocity)
 
     elif x == 'volere':
