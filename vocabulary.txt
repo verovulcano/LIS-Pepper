@@ -36,12 +36,12 @@ TWO HANDS
 Example of sentences:
 
 - Buongiorno mi dica
-- Cosa ti porto?
-- Io vorrei (caffè, panino, ...)
-- Mi porti (caffè, panino, ...)
-- Dov'è il bagno?
-- Il bagno è a destra / a sinistra
-- Io vorrei bere (acqua, coca-cola, ...)
-- Io vorrei mangiare (panino)
-- (caffè, panino, ...) non c'è
-- C'è un tavolo?
+- Cosa ti porto
+- Io vorrei un/una caffè/coca-cola/...
+- Mi porti un/una caffè/coca-cola/...
+- Dov'è il bagno
+- Il bagno è a destra/a sinistra
+- Io vorrei bere un/una caffè/coca-cola/...
+- Io vorrei mangiare un panino
+- Il/la caffè/panino/coca-cola non c'è
+- C'è un tavolo

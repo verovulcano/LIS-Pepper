@@ -52,4 +52,8 @@ def text_processing(text):
 				sentence[n] = 'gomma da masticare'
 				sentence.remove(sentence[n + 1])
 
+		elif elem == "c'":
+
+			sentence.remove(sentence[n])
+
 	return sentence
